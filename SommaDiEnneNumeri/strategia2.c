@@ -18,7 +18,7 @@ int main()
             } else {
                 tag = abs(pow(2,i) - pid) //da controllare funzione abs
                 //manda
-                MPI_Send
+                MPI_Send  //pene Putty
             }
         }
     }
