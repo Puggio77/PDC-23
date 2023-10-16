@@ -4,6 +4,7 @@
 %Libraries
 \usepackage{makeidx} %per l'indice
 \usepackage{graphicx} %per le immagini
+\usepackage[italian]{babel}
 
 %preamble
 \author{R. Puggioni, R. Regina, F. Trotti}
@@ -17,5 +18,62 @@
 \clearpage
 \printindex
 \clearpage
+
+\tableofcontents
+
+\newpage
+
+\section{Descrizione del problema}
+\textit{Sviluppare un algoritmo per il calcolo della somma di N numeri reali, in ambiente di calcolo parallelo su architettura MIMD a memoria distribuita, che utilizzi la Liberia MPI.}
+
+
+
+
+
+In un ambiente di calcolo parallelo la somma di N numeri deve essere prima strutturato in un certo modo. Per poter risolvere tale problema bisogna innanzitutto decomporre il nostro problema di dimensione N in P sottoproblemi di dimensione N/P e risolvi conte su più calcolatori. 
+Per la somma di N numeri in ambiente di calcolo parallelo dobbiamo suddividere la somma in somme parziali ed assegnare ciascuna somma parziale ad un processore per poi ricombinare le somme parziali e ottenere la somma totale+
+
+\textit{L'Algoritmo deve: \\ \\
+1)Pendere in input il numero N di numeri da sommare \\ \\
+2) Prendere in input i numeri se N < = 20\\ \\
+3) Generare i numeri random se N > 2 \\ \\
+4) Prendere in input il numeri di strategia da utilizzare \\ \\
+5)Implementare la I, la II e la III strategia di comunicazione \\ \\
+}
+
+
+
+
+\section{descrizione della strategia di parallelizzazione implementata}
+
+Per l'algoritmo della somma di N numeri possiamo applicare tre tipi di  strategie differenti:
+
+\subsection{Strategia I}
+
+In questo tipo di strategia ogni processore che andiamo a utilizzare calcola la propria somma parziale, ad ogni passo  avremo che ciascun processore invia tale valore ad unico processore prestabilito. Nel nostro processore conteniamo la somma totale
+
+\subsection{Strategia II}
+
+Nella seconda strategia come nella prima ogni strategia calcola la propria somma parziale. Coppie distinte di processori comunicano contemporaneamente ad ogni passo. 
+
+
+\subsection{Strategia III}
+
+In questa terza strategia il risultato della somma di N n
+
+
+\section{Codice}
+
+
+
+\section{Esempio d'uso degli input presenti nel software}
+
+
+\section{Sezione dei grafici}
+\subsection{tempo d'esecuzione}
+\subsection{speed-up}
+\subsection{efficienza}
+
+
 
 \end{document}
